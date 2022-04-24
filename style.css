@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  color: #444;
+  border-top: 10px solid #1098ad;
+}
+
+h1,
+h2,
+h3 {
+  color: #1098ad;
+}
+
+h1 {
+  font-size: 25px;
+  text-transform: uppercase;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+h1::first-letter {
+  font-style: normal;
+  margin-right: 5px;
+}
+
+h2 {
+  font-size: 35px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+h2::after {
+  content: "TOP";
+  font-size: 14px;
+  font-weight: bold;
+  background-color: yellow;
+  display: inline-block;
+  padding: 5px;
+  color: #000;
+  position: absolute;
+  top: -10px;
+  right: -25px;
+}
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+h4 {
+  font-size: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+li {
+  font-size: 17px;
+  line-height: 1.5;
+  margin: 5px;
+}
+
+nav {
+  font-size: 17px;
+}
+
+#author {
+  font-style: italic;
+  font-size: 14px;
+}
+
+#copyright {
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.related-author {
+  font-weight: bold;
+  font-size: 14px;
+  font-style: italic;
+  font-family: cursive;
+}
+
+.related-posts {
+  list-style: none;
+}
+
+.main-header {
+  background-color: #f7f7f7;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.post-header {
+  margin-bottom: 20px;
+}
+
+aside {
+  background-color: #f7f7f7;
+  border-top: 6px solid #1098ad;
+  border-bottom: 6px solid #1098ad;
+  padding: 40px 0px;
+  width: 500px;
+}
+
+ul,
+ol {
+  margin-left: 40px;
+  margin-bottom: 20px;
+}
+
+li:first-child {
+  font-weight: bold;
+}
+
+li:last-child {
+  font-style: italic;
+}
+
+article p:last-child {
+  color: red;
+  font-weight: bold;
+}
+
+a:link {
+  color: #1098ad;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #1098ad;
+}
+
+a:hover {
+  color: orangered;
+  text-decoration: underline orangered;
+}
+
+a:active {
+  color: blue;
+}
+
+article {
+  margin-bottom: 40px;
+}
+
+.post-img {
+  width: 100%;
+  height: auto;
+}
+
+/*Centering Our Page*/
+
+.main-container {
+  width: 700px;
+  /* margin-left: auto;
+  margin-right: auto; */
+  margin: 0 auto; /*using short- hand*/
+  position: relative;
+}
+
+nav a:link {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav a:link:last-child {
+  margin-right: 0;
+}
+
+.like-button {
+  font-size: 22px;
+  padding: 8px;
+  background-color: rgba(0, 251, 255, 0.084);
+  border: 2px solid rgba(0, 0, 0, 0.431);
+  border-radius: 5px;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+}
+
+.like-button:hover {
+  background-color: rgba(0, 251, 255, 0.144);
+  border: 2px solid rgba(0, 0, 0, 0.524);
+}

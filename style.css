@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -56,7 +57,7 @@ h4 {
   font-size: 18px;
   text-align: center;
   text-transform: uppercase;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 p {
@@ -94,11 +95,13 @@ nav {
 
 .related-posts {
   list-style: none;
+  margin-left: 0;
+  box-sizing: border-box;
+  /*no need of this until we have somewhere used box-sizing:content-box; as we have set the box-sizing:border-box; using universal selector */
 }
 
 .main-header {
   background-color: #f7f7f7;
-  padding: 20px;
   margin-bottom: 20px;
 }
 
@@ -110,8 +113,7 @@ aside {
   background-color: #f7f7f7;
   border-top: 6px solid #1098ad;
   border-bottom: 6px solid #1098ad;
-  padding: 40px 0px;
-  width: 500px;
+  padding: 20px 40px;
 }
 
 ul,
@@ -163,7 +165,7 @@ article {
 /*Centering Our Page*/
 
 .main-container {
-  width: 700px;
+  width: 1100px;
   /* margin-left: auto;
   margin-right: auto; */
   margin: 0 auto; /*using short- hand*/
@@ -193,4 +195,64 @@ nav a:link:last-child {
 .like-button:hover {
   background-color: rgba(0, 251, 255, 0.144);
   border: 2px solid rgba(0, 0, 0, 0.524);
+  transform: scale(1.1);
+  transition: 100ms;
+}
+
+h1 {
+  padding-top: 10px;
+  float: left;
+}
+
+nav {
+  padding-top: 20px;
+  float: right;
+  padding-right: 20px;
+}
+
+/* used to clear the float by inserting new empty div block element*/
+/*.clear {
+  clear: both;
+} */
+
+/* used to clear the float by inserting new empty block element using pseudo element*/
+.clearhash::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.author {
+  float: left;
+  margin-left: 10px;
+  margin-top: 15px;
+}
+
+.author-img {
+  float: left;
+  margin-bottom: 10px;
+}
+
+article {
+  width: 700px;
+  float: left;
+}
+
+aside {
+  width: 340px;
+  float: right;
+}
+
+footer {
+  clear: both;
+  background-color: rgba(255, 255, 0, 0.394);
+}
+
+nav a {
+  font-family: cursive;
+}
+
+nav a:hover {
+  transform: scale(1.1);
+  transition: 100ms;
 }

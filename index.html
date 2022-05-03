@@ -8,33 +8,32 @@
 
   <body>
     <div class="main-container">
-      <header class="main-header clearhash">
+      <header class="main-header">
         <h1>📘 The Code Magazine</h1>
 
         <nav>
           <a href="blog.html">Blog</a>
           <a href="#">Challenges</a>
-          <a href="#">Flexbox</a>
+          <a href="flexbox.html">Flexbox</a>
           <a href="#">CSS Grid</a>
         </nav>
-        <!-- <div class="clear"></div> -->
       </header>
 
       <article>
         <header class="post-header">
           <h2>The Basic Language of the Web: HTML</h2>
-
-          <img
-            src="img/laura-jones.jpg"
-            alt="Headshot of Laura Jones"
-            height="50"
-            width="50"
-            class="author-img"
-          />
-
-          <p id="author" class="author">
-            Posted by <strong>Laura Jones</strong> on Monday, June 21st 2027
-          </p>
+          <div class="author-box">
+            <img
+              src="img/laura-jones.jpg"
+              alt="Headshot of Laura Jones"
+              height="50"
+              width="50"
+              class="author-img"
+            />
+            <p id="author" class="author">
+              Posted by <strong>Laura Jones</strong> on Monday, June 21st 2027
+            </p>
+          </div>
 
           <img
             src="img/post-img.jpg"
@@ -111,38 +110,45 @@
         <h4>Related posts</h4>
 
         <ul class="related-posts">
-          <li>
+          <li class="related-box">
             <img
               src="img/related-1.jpg"
               alt="Person programming"
               width="75"
               width="75"
             />
-            <a href="#">How to Learn Web Development</a>
-            <p class="related-author">By Jonas Schmedtmann</p>
+            <div>
+              <a href="#">How to Learn Web Development</a>
+              <p class="related-author">By Jonas Schmedtmann</p>
+            </div>
           </li>
-          <li>
+          <li class="related-box">
             <img
               src="img/related-2.jpg"
               alt="Lightning"
               width="75"
               heigth="75"
             />
-            <a href="#">The Unknown Powers of CSS</a>
-            <p class="related-author">By Jim Dillon</p>
+            <div>
+              <a href="#">The Unknown Powers of CSS</a>
+              <p class="related-author">By Jim Dillon</p>
+            </div>
           </li>
-          <li>
+          <li class="related-box">
             <img
               src="img/related-3.jpg"
               alt="JavaScript code on a screen"
               width="75"
               height="75"
             />
-            <a href="#">Why JavaScript is Awesome</a>
-            <p class="related-author">By Matilda</p>
+            <div>
+              <a href="#">Why JavaScript is Awesome</a>
+              <p class="related-author">By Matilda</p>
+            </div>
           </li>
         </ul>
       </aside>
+
       <button class="like-button">💕Like</button>
       <footer>
         <p id="copyright">Copyright &copy; 2027 by The Code Magazine.</p>

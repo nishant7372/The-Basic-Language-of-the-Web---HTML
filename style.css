@@ -20,7 +20,6 @@ h1 {
   font-size: 25px;
   text-transform: uppercase;
   font-style: italic;
-  margin-bottom: 20px;
 }
 
 h1::first-letter {
@@ -57,7 +56,8 @@ h4 {
   font-size: 18px;
   text-align: center;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-top: 15px;
+  margin-bottom: 30px;
 }
 
 p {
@@ -74,6 +74,7 @@ li {
 
 nav {
   font-size: 17px;
+  padding: 0 10px;
 }
 
 #author {
@@ -96,13 +97,10 @@ nav {
 .related-posts {
   list-style: none;
   margin-left: 0;
-  box-sizing: border-box;
-  /*no need of this until we have somewhere used box-sizing:content-box; as we have set the box-sizing:border-box; using universal selector */
 }
 
 .main-header {
   background-color: #f7f7f7;
-  margin-bottom: 20px;
 }
 
 .post-header {
@@ -130,10 +128,7 @@ li:last-child {
   font-style: italic;
 }
 
-article p:last-child {
-  color: red;
-  font-weight: bold;
-}
+/*Link Styling*/
 
 a:link {
   color: #1098ad;
@@ -153,10 +148,6 @@ a:active {
   color: blue;
 }
 
-article {
-  margin-bottom: 40px;
-}
-
 .post-img {
   width: 100%;
   height: auto;
@@ -165,7 +156,7 @@ article {
 /*Centering Our Page*/
 
 .main-container {
-  width: 1100px;
+  width: 1200px;
   /* margin-left: auto;
   margin-right: auto; */
   margin: 0 auto; /*using short- hand*/
@@ -181,6 +172,8 @@ nav a:link:last-child {
   margin-right: 0;
 }
 
+/*Like Button*/
+
 .like-button {
   font-size: 22px;
   padding: 8px;
@@ -188,7 +181,7 @@ nav a:link:last-child {
   border: 2px solid rgba(0, 0, 0, 0.431);
   border-radius: 5px;
   position: absolute;
-  bottom: 30px;
+  bottom: 50px;
   right: 30px;
 }
 
@@ -199,55 +192,12 @@ nav a:link:last-child {
   transition: 100ms;
 }
 
-h1 {
-  padding-top: 10px;
-  float: left;
-}
-
-nav {
-  padding-top: 20px;
-  float: right;
-  padding-right: 20px;
-}
-
-/* used to clear the float by inserting new empty div block element*/
-/*.clear {
-  clear: both;
-} */
-
-/* used to clear the float by inserting new empty block element using pseudo element*/
-.clearhash::after {
-  content: "";
-  clear: both;
-  display: block;
-}
-
-.author {
-  float: left;
-  margin-left: 10px;
-  margin-top: 15px;
-}
-
-.author-img {
-  float: left;
-  margin-bottom: 10px;
-}
-
-article {
-  width: 700px;
-  float: left;
-}
-
-aside {
-  width: 340px;
-  float: right;
-}
-
+/*Footer*/
 footer {
-  clear: both;
   background-color: rgba(255, 255, 0, 0.394);
 }
 
+/*NavBar*/
 nav a {
   font-family: cursive;
 }
@@ -255,4 +205,131 @@ nav a {
 nav a:hover {
   transform: scale(1.1);
   transition: 100ms;
+}
+
+.author-box {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.author {
+  margin-bottom: 0;
+}
+
+.author-box img {
+  margin-bottom: 0px;
+}
+
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+nav {
+  margin-right: 15px;
+}
+
+.related-box {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.related-posts a:link {
+  font-weight: bold;
+  font-style: normal;
+  font-size: 14px;
+  margin-bottom: 3px;
+  display: block;
+}
+
+.related-author {
+  margin-bottom: 0;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.related-posts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.related-posts li {
+  margin: 0px;
+}
+
+/*FlexBox.html*/
+
+.flex-container {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: space-evenly;
+}
+
+.item {
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+}
+
+.item-1 {
+  background-color: yellow;
+}
+.item-2 {
+  background-color: rgb(38, 255, 0);
+}
+.item-3 {
+  background-color: orange;
+}
+.item-4 {
+  background-color: skyblue;
+}
+.item-5 {
+  background-color: rgb(81, 211, 81);
+}
+.item-6 {
+  background-color: lightblue;
+}
+.item-7 {
+  background-color: lightcoral;
+}
+.item-8 {
+  background-color: lightcyan;
+}
+.item-9 {
+  background-color: violet;
+}
+
+.flex-main-container {
+  margin: 0 auto;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr 325px;
+  column-gap: 75px;
+  row-gap: 40px;
+}
+
+.main-header {
+  grid-column: 1/-1;
+}
+
+footer {
+  grid-column: 1/-1;
+}
+
+aside {
+  align-self: start;
 }
